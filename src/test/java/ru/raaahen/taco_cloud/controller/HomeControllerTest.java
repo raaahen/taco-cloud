@@ -1,4 +1,4 @@
-package ru.raaahen.taco_cloud;
+package ru.raaahen.taco_cloud.controller;
 
 import static org.hamcrest.Matchers.containsString;
 import org.junit.jupiter.api.Test;
