@@ -6,8 +6,8 @@ import java.util.Map;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
-import ru.raaahen.taco_cloud.data.Ingredient;
-import ru.raaahen.taco_cloud.data.Ingredient.Type;
+import ru.raaahen.taco_cloud.data.entity.Ingredient;
+import ru.raaahen.taco_cloud.data.entity.Ingredient.Type;
 
 @Component
 public class IngredientByIdConverter implements Converter<String, Ingredient>

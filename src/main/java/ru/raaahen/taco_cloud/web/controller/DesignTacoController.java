@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import ru.raaahen.taco_cloud.data.Ingredient;
-import ru.raaahen.taco_cloud.data.Ingredient.Type;
-import ru.raaahen.taco_cloud.data.Taco;
-import ru.raaahen.taco_cloud.data.TacoOrder;
+import ru.raaahen.taco_cloud.data.entity.Ingredient;
+import ru.raaahen.taco_cloud.data.entity.Taco;
+import ru.raaahen.taco_cloud.data.entity.TacoOrder;
+import ru.raaahen.taco_cloud.data.entity.Ingredient.Type;
 
 @Slf4j
 @Controller

@@ -8,7 +8,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import ru.raaahen.taco_cloud.data.TacoOrder;
+import ru.raaahen.taco_cloud.data.entity.TacoOrder;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

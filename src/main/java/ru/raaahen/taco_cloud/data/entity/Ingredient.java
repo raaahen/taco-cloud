@@ -1,4 +1,4 @@
-package ru.raaahen.taco_cloud.data;
+package ru.raaahen.taco_cloud.data.entity;
 
 import lombok.Data;
 
