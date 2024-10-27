@@ -1,4 +1,4 @@
-package ru.raaahen.taco_cloud.controller;
+package ru.raaahen.taco_cloud.web.controller;
 
 import java.util.Arrays;
 import java.util.List;
