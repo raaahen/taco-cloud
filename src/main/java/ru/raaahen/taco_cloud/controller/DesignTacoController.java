@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import ru.raaahen.taco_cloud.data.Ingredient;
 import ru.raaahen.taco_cloud.data.Ingredient.Type;
@@ -39,7 +40,6 @@ public class DesignTacoController
             new Ingredient("JACK", "Monterrey Jack", Type.CHEESE), 
             new Ingredient("SLSA", "Salsa", Type.SAUCE),
             new Ingredient("SRCR", "Sour Cream", Type.SAUCE));
-
         Type[] types = Ingredient.Type.values();
         for (Type type : types)
         {
@@ -66,9 +66,15 @@ public class DesignTacoController
     }
 
     @PostMapping
-    private String processDesign(@ModelAttribute("taco") Taco taco, 
+    private String processDesign(@Valid @ModelAttribute("taco") Taco taco, Errors errors,
         @ModelAttribute("order") TacoOrder tacoOrder)
     {
+        if (errors.hasErrors())
+        {
+            return "design";
+        }
+        tacoOrder.addTaco(taco);
+        log.info("Proccessing taco {}", taco);
         return "redirect:/orders/current";
     }
 
