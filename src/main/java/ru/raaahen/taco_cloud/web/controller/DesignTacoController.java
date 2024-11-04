@@ -21,7 +21,7 @@ import ru.raaahen.taco_cloud.data.entity.Ingredient;
 import ru.raaahen.taco_cloud.data.entity.Taco;
 import ru.raaahen.taco_cloud.data.entity.TacoOrder;
 import ru.raaahen.taco_cloud.data.entity.Ingredient.Type;
-import ru.raaahen.taco_cloud.data.repository.interfaces.IngredientRepository;
+import ru.raaahen.taco_cloud.data.repository.IngredientRepository;
 
 @Slf4j
 @Controller
