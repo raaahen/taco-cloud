@@ -1,19 +1,17 @@
 package ru.raaahen.taco_cloud.data.entity;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.domain.Persistable;
-import org.springframework.data.relational.core.mapping.Table;
-
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AccessLevel;
 
 @Data
-@Table
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor(access=AccessLevel.PRIVATE, force=true)
-public class Ingredient implements Persistable<String>
+public class Ingredient
 {
     @Id
     private String id;
@@ -23,11 +21,5 @@ public class Ingredient implements Persistable<String>
     public enum Type 
     {
         WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
-    }
-
-    @Override
-    public boolean isNew() 
-    {
-        return id == null;
     }
 }
